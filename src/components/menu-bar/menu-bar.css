@@ -40,12 +40,12 @@
     flex-grow: 1;
 }
 
-.scratch-logo {
+.KsAiDaLogo {
     height:  1.6rem;
     vertical-align: middle;
 }
 
-.scratch-logo.clickable {
+.KsAiDaLogo.clickable {
     cursor: pointer;
 }
 

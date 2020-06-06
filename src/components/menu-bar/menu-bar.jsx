@@ -71,7 +71,7 @@ import dropdownCaret from './dropdown-caret.svg';
 import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 
-import scratchLogo from './scratch-logo.svg';
+import KsAiDaLogo from './k-saida-logo.png';
 
 import sharedMessages from '../../lib/shared-messages';
 
@@ -103,14 +103,15 @@ const MenuBarItemTooltip = ({
         );
     }
     return (
-        <ComingSoonTooltip
+        /*<ComingSoonTooltip
             className={classNames(styles.comingSoon, className)}
             place={place}
             tooltipClassName={styles.comingSoonTooltip}
             tooltipId={id}
         >
             {children}
-        </ComingSoonTooltip>
+        </ComingSoonTooltip>*/
+        null
     );
 };
 
@@ -339,12 +340,13 @@ class MenuBar extends React.Component {
                         <div className={classNames(styles.menuBarItem)}>
                             <img
                                 alt="Scratch"
-                                className={classNames(styles.scratchLogo, {
+                                className={classNames(styles.KsAiDaLogo, {
                                     [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                                 })}
                                 draggable={false}
                                 src={this.props.logo}
-                                onClick={this.props.onClickLogo}
+                                /*onClick={this.props.onClickLogo}*/
+                                onClick={() => { window.location.reload() }}
                             />
                         </div>
                         {(this.props.canChangeLanguage) && (<div
@@ -522,7 +524,7 @@ class MenuBar extends React.Component {
                             username={this.props.authorUsername}
                         />
                     ) : null)}
-                    <div className={classNames(styles.menuBarItem)}>
+                    {/*<div className={classNames(styles.menuBarItem)}>
                         {this.props.canShare ? (
                             (this.props.isShowingProject || this.props.isUpdating) && (
                                 <ProjectWatcher onDoneUpdating={this.props.onSeeCommunity}>
@@ -531,11 +533,11 @@ class MenuBar extends React.Component {
                                             <ShareButton
                                                 className={styles.menuBarButton}
                                                 isShared={this.props.isShared}
-                                                /* eslint-disable react/jsx-no-bind */
+
                                                 onClick={() => {
                                                     this.handleClickShare(waitForUpdate);
                                                 }}
-                                                /* eslint-enable react/jsx-no-bind */
+
                                             />
                                         )
                                     }
@@ -558,11 +560,11 @@ class MenuBar extends React.Component {
                                         waitForUpdate => (
                                             <CommunityButton
                                                 className={styles.menuBarButton}
-                                                /* eslint-disable react/jsx-no-bind */
+
                                                 onClick={() => {
                                                     this.handleClickSeeCommunity(waitForUpdate);
                                                 }}
-                                                /* eslint-enable react/jsx-no-bind */
+
                                             />
                                         )
                                     }
@@ -573,7 +575,7 @@ class MenuBar extends React.Component {
                                 <CommunityButton className={styles.menuBarButton} />
                             </MenuBarItemTooltip>
                         ) : [])}
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* show the proper UI in the account menu, given whether the user is
@@ -663,7 +665,7 @@ class MenuBar extends React.Component {
                             {this.props.showComingSoon ? (
                                 <React.Fragment>
                                     <MenuBarItemTooltip id="mystuff">
-                                        <div
+                                        {/*<div
                                             className={classNames(
                                                 styles.menuBarItem,
                                                 styles.hoverable,
@@ -674,13 +676,13 @@ class MenuBar extends React.Component {
                                                 className={styles.mystuffIcon}
                                                 src={mystuffIcon}
                                             />
-                                        </div>
+                                        </div>*/}
                                     </MenuBarItemTooltip>
                                     <MenuBarItemTooltip
                                         id="account-nav"
                                         place={this.props.isRtl ? 'right' : 'left'}
                                     >
-                                        <div
+                                        {/*<div
                                             className={classNames(
                                                 styles.menuBarItem,
                                                 styles.hoverable,
@@ -698,7 +700,7 @@ class MenuBar extends React.Component {
                                                 className={styles.dropdownCaretIcon}
                                                 src={dropdownCaret}
                                             />
-                                        </div>
+                                        </div>*/}
                                     </MenuBarItemTooltip>
                                 </React.Fragment>
                             ) : []}
@@ -774,7 +776,7 @@ MenuBar.propTypes = {
 };
 
 MenuBar.defaultProps = {
-    logo: scratchLogo,
+    logo: KsAiDaLogo,
     onShare: () => {}
 };
 

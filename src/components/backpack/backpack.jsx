@@ -44,7 +44,7 @@ const Backpack = ({
                     id="gui.backpack.header"
                 />
             ) : (
-                <ComingSoonTooltip
+                /*<ComingSoonTooltip
                     place="top"
                     tooltipId="backpack-tooltip"
                 >
@@ -53,7 +53,8 @@ const Backpack = ({
                         description="Button to open the backpack"
                         id="gui.backpack.header"
                     />
-                </ComingSoonTooltip>
+                </ComingSoonTooltip>*/
+                null
             )}
         </div>
         {expanded ? (

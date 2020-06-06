@@ -16,6 +16,7 @@ import TargetPane from '../../containers/target-pane.jsx';
 import SoundTab from '../../containers/sound-tab.jsx';
 import StageWrapper from '../../containers/stage-wrapper.jsx';
 import Loader from '../loader/loader.jsx';
+import Waiting from '../waiting/waiting.jsx';
 import Box from '../box/box.jsx';
 import MenuBar from '../menu-bar/menu-bar.jsx';
 import CostumeLibrary from '../../containers/costume-library.jsx';
@@ -329,9 +330,9 @@ const GUIComponent = props => {
                                     {soundsTabVisible ? <SoundTab vm={vm} /> : null}
                                 </TabPanel>
                             </Tabs>
-                            {backpackVisible ? (
+                            {/*backpackVisible ? (
                                 <Backpack host={backpackHost} />
-                            ) : null}
+                            ) : null*/}
                         </Box>
 
                         <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
@@ -350,6 +351,7 @@ const GUIComponent = props => {
                         </Box>
                     </Box>
                 </Box>
+                <Waiting />
                 <DragLayer />
             </Box>
         );

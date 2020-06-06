@@ -46,6 +46,12 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import machineLearning from './machinelearning/machinelearning.png';
+import machineLearningImage from './machinelearning/machinelearning-small.svg';
+
+import deepLearning from './deeplearning/deeplearning.png';
+import deepLearningImage from './deeplearning/deeplearning-small.svg';
+
 export default [
     {
         name: (
@@ -317,5 +323,51 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="MachineLearning"
+                description="Name for the 'Machine Learning' extension"
+                id="gui.extension.machinelearning.name"
+            />
+        ),
+        extensionId: 'machineLearning',
+        iconURL: machineLearning,
+        insetIconURL: machineLearningImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Definition machine learning model with math.js"
+                description="Description for the 'Machine Learning' extension"
+                id="gui.extension.machinelearning.description"
+            />
+        ),
+        featured: true,
+        bluetoothRequired: false,
+        launchPeripheralConnectionFlow: false,
+        useAutoScan: false
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="DeepLearning"
+                description="Name for the 'Deep Learning' extension"
+                id="gui.extension.deeplearning.name"
+            />
+        ),
+        extensionId: 'deepLearning',
+        iconURL: deepLearning,
+        insetIconURL: deepLearningImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Definition deep learning model with tensorflow"
+                description="Description for the 'Deep Learning' extension"
+                id="gui.extension.deeplearning.description"
+            />
+        ),
+        featured: true,
+        bluetoothRequired: false,
+        launchPeripheralConnectionFlow: false,
+        useAutoScan: false
     }
 ];
