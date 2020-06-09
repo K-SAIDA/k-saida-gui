@@ -46,6 +46,9 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import bigData from './bigdata/bigdata.png';
+import bigDataImage from './bigdata/bigdata-small.svg';
+
 import machineLearning from './machinelearning/machinelearning.png';
 import machineLearningImage from './machinelearning/machinelearning-small.svg';
 
@@ -323,6 +326,29 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
+    },
+    {
+      name: (
+          <FormattedMessage
+              defaultMessage="BigData"
+              description="Name for the 'Deep Learning' extension"
+              id="gui.extension.bigdata.name"
+          />
+      ),
+      extensionId: 'bigData',
+      iconURL: bigData,
+      insetIconURL: bigDataImage,
+      description: (
+          <FormattedMessage
+              defaultMessage="Definition big data"
+              description="Description for the 'Big Data' extension"
+              id="gui.extension.bigdata.description"
+          />
+      ),
+      featured: true,
+      bluetoothRequired: false,
+      launchPeripheralConnectionFlow: false,
+      useAutoScan: false
     },
     {
         name: (
