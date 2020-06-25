@@ -17,6 +17,7 @@ import SoundTab from '../../containers/sound-tab.jsx';
 import StageWrapper from '../../containers/stage-wrapper.jsx';
 import Loader from '../loader/loader.jsx';
 import Waiting from '../waiting/waiting.jsx';
+import Viewer from '../viewer/viewer.jsx';
 import Box from '../box/box.jsx';
 import MenuBar from '../menu-bar/menu-bar.jsx';
 import CostumeLibrary from '../../containers/costume-library.jsx';
@@ -352,6 +353,7 @@ const GUIComponent = props => {
                     </Box>
                 </Box>
                 <Waiting />
+                <Viewer />
                 <DragLayer />
             </Box>
         );
